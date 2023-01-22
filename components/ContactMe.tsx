@@ -1,41 +1,23 @@
 import React from 'react'
-import { useForm, SubmitHandler } from "react-hook-form"
-import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid"
+import { PhoneIcon, MapPinIcon } from "@heroicons/react/24/solid"
 
 type Props = {}
 
-type Inputs = {
-    name: string
-    email: string
-    subject: string
-    message: string
-};
-
 export default function ContactMe({ }: Props) {
-    const { register, handleSubmit, } = useForm<Inputs>();
-    const onSubmit: SubmitHandler<Inputs> = formData => {
-        window.location.href = `mailto:Maltzev.alexandr@gmail.com@gmail.com?subject=${formData.subject}&body=Hi. my name is ${formData.name} ${formData.message}}`
-    }
-
     return (
         <div className='h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
             <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Мои контакты</h3>
 
             <div className="flex flex-col space-y-10">
-                <h4 className='text-4xl font-semibold text-center'>
+                <h4 className='text-4xl font-semibold text-center px-6'>
                     У меня есть как раз то, что тебе нужно. {" "}
                     <span className='decoration-[#F7AB0A1]/50 underline'>Lets Talk.</span>
                 </h4>
 
                 <div className='space-y-10'>
-                    <div className='flex items-center space-x-5 justify-center'>
+                    <div className='flex items-center space-x-5 justify-center px-6'>
                         <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
                         <p className='text-2xl'>+79518734067</p>
-                    </div>
-
-                    <div className='flex items-center space-x-5 justify-center'>
-                        <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
-                        <p className='text-2xl'>Maltzev.alexandr@gmail.com</p>
                     </div>
 
                     <div className='flex items-center space-x-5 justify-center'>

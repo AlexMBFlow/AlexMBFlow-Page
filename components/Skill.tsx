@@ -14,7 +14,7 @@ export default function Skill({ directionLeft, image, persent }: Props) {
         <div className='group rounded-full relative flex cursor-pointer'>
             <motion.div
                 initial={{
-                    x: directionLeft ? -200 : 200,
+                    x: directionLeft ? -50 : 50,
                     opacity: 0
                 }}
                 whileInView={{

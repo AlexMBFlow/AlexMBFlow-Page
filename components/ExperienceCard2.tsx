@@ -40,16 +40,15 @@ export default function ExperienceCard({ companyName, jobName, technology, date,
             <div className="px-8 md:px-10">
                 <h4 className='text-4xl font-light'>{jobName}</h4>
                 <p className='font-bold text-2xl mt-1'>{companyName}</p>
-                <div className='flex space-x-2 my-2'>
+                <div className='flex my-2 flex-wrap'>
                 {
                     technology.map(tech => (
                         <img key={counter++} style={{
-                            width: "6em",
-                            height: "1.5em"
-                        }} className='h-10 w-10 rounded-full' src={tech} alt="" />
+                            width: "6.5em",
+                            height: "2.5em"
+                        }} className='h-10 w-10 rounded-full p-2' src={tech} alt="" />
                     ))
                 }
-                    {/* так было по дефолту!! <img className='h-10 w-10 rounded-full' src="https://vk.com/emoji/e/f09fa493.png" alt="" /> */}
                 </div>
                 <p className='uppercase py-5 text-gray-300'>{date[0]} - {date[1]}</p>
                 <ul className="list-disc space-y-4 ml-5 text-lg">

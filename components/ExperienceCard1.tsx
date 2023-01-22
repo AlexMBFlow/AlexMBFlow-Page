@@ -44,12 +44,11 @@ export default function ExperienceCard({ companyName, jobName, technology, date,
                 {
                     technology.map(tech => (
                         <img key={counter++} style={{
-                            width: "6em",
-                            height: "1.5em"
-                        }} className='h-10 w-10 rounded-full' src={tech} alt="" />
+                            width: "6.5em",
+                            height: "2.5em"
+                        }} className='h-10 w-10 rounded-full p-2' src={tech} alt="" />
                     ))
                 }
-                    {/* так было по дефолту!! <img className='h-10 w-10 rounded-full' src="https://vk.com/emoji/e/f09fa493.png" alt="" /> */}
                 </div>
                 <p className='uppercase py-5 text-gray-300'>{date[0]} - {date[1]}</p>
                 <ul className="list-disc space-y-4 ml-5 text-lg">
