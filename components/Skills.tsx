@@ -2,8 +2,6 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Skill from './Skill'
 
-
-
 import js from "../content/js.png"
 import ts from "../content/ts.png"
 import react from "../content/react.png"
@@ -11,8 +9,7 @@ import redux from "../content/redux.png"
 import mobx from "../content/mobx.png"
 import nodejs from "../content/nodejs.png"
 import git from "../content/git.png"
-import postgres from "../content/postgres.png"
-import mongodb from "../content/mongodb.jpg"
+import mongodb from "../content/mongodb.png"
 import electron from "../content/electron.png"
 import antd from "../content/antd.png"
 import jira from "../content/jira.png"
@@ -44,22 +41,21 @@ export default function Skills({ }: Props) {
             </h3>
 
             <div className='grid grid-cols-4 gap-5'>
-                <Skill image={js} directionLeft={true} />
-                <Skill image={ts} directionLeft={true} />
-                <Skill image={react} directionLeft={true} />
-                <Skill image={redux} directionLeft={true} />
-                <Skill image={mobx} directionLeft={true} />
-                <Skill image={nodejs} directionLeft={true} />
-                <Skill image={git} directionLeft={true} />
-                <Skill image={postgres} directionLeft={true} />
-                <Skill image={mongodb} />
-                <Skill image={electron} />
-                <Skill image={antd} />
-                <Skill image={jira} />
-                <Skill image={webpack} />
-                <Skill image={gulp} />
-                <Skill image={figma} />
-                <Skill image={rust} />
+                <Skill persent={95} image={js} directionLeft={true} />
+                <Skill persent={70} image={ts} directionLeft={true} />
+                <Skill persent={90} image={react} directionLeft={true} />
+                <Skill persent={90} image={redux} directionLeft={true} />
+                <Skill persent={70} image={mobx} directionLeft={true} />
+                <Skill persent={75} image={nodejs} directionLeft={true} />
+                <Skill persent={90} image={git} directionLeft={true} />
+                <Skill persent={60} image={mongodb} />
+                <Skill persent={85} image={electron} />
+                <Skill persent={90} image={antd} />
+                <Skill persent={90} image={jira} />
+                <Skill persent={55} image={webpack} />
+                <Skill persent={60} image={gulp} />
+                <Skill persent={99} image={figma} />
+                <Skill persent={5} image={rust} />
             </div>
         </motion.div>
     )

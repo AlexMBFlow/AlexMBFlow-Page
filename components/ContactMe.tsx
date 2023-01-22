@@ -44,7 +44,7 @@ export default function ContactMe({ }: Props) {
                     </div>
                 </div>
 
-                <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit mx-auto'>
+{/*                 <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit mx-auto'>
                     <div className='flex space-x-2'>
                         <input {...register("name")} placeholder='Имя' className='contactInput' type="text" />
                         <input {...register("email")} placeholder='Email' className='contactInput' type="email" />
@@ -52,7 +52,7 @@ export default function ContactMe({ }: Props) {
                     <input {...register("subject")} placeholder='Заголовок' className='contactInput' type="text" />
                     <textarea placeholder='Сообщение' className='contactInput' />
                     <button type='submit' className='bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg'>Отправить</button>
-                </form>
+                </form> */}
             </div>
         </div>
     )
