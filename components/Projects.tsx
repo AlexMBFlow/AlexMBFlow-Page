@@ -48,10 +48,9 @@ export default function Projects({ }: Props) {
 
                         <div className='space-y-10 px-0 md:p-10 max-w-6xl'>
                             <h4 className='text-4xl font-semibold text-center'>
-                                <span className='underline decoration-[#F7AB0A]/50'>Леруа Мерлен, проект {i + 1} из </span>
-                                {projects.length}
+                                <span className='underline decoration-[#F7AB0A]/50'>Леруа Мерлен, проект</span>
+                                <div>{i + 1} из {projects.length}</div>                                
                             </h4>
-
                             <p className='text-lg text-center md:text-left'>
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit assumenda illo facere ipsam officia enim temporibus, ipsa ut laudantium voluptates, animi reprehenderit, voluptate eveniet aut quo perspiciatis commodi quisquam nam?
                             </p>
