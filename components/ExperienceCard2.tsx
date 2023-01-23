@@ -41,22 +41,24 @@ export default function ExperienceCard({ companyName, jobName, technology, date,
                 <h4 className='text-4xl font-light'>{jobName}</h4>
                 <p className='font-bold text-2xl mt-1'>{companyName}</p>
                 <div className='flex my-2 flex-wrap'>
-                {
-                    technology.map(tech => (
-                        <img key={counter++} style={{
-                            width: "6.5em",
-                            height: "2.5em"
-                        }} className='h-10 w-10 rounded-full p-2' src={tech} alt="" />
-                    ))
-                }
+                    {
+                        technology.map(tech => (
+                            <img key={counter++} style={{
+                                width: "5.5em",
+                                height: "1.5em"
+                            }} className='rounded-full mr-2 my-2' src={tech} alt="" />
+                        ))
+                    }
                 </div>
                 <p className='uppercase py-5 text-gray-300'>{date[0]} - {date[1]}</p>
                 <ul className="list-disc space-y-4 ml-5 text-lg">
-                    <li>Summary points</li>
-                    <li>Summary points</li>
-                    <li>Summary points</li>
-                    <li>Summary points</li>
-                    <li>Summary points</li>
+                    <li>Участие в разработке умных устройств, специализирующихся на внутренней навигации (Indoor-навигация)</li>
+                    <li>Создание новых элементов графического интерфейса приложений на основе фреймворка Electron и чистого javascript (vanilla)</li>
+                    <li>Верстка макетов с Figma</li>
+                    <li>Поддержка, поиск и исправление ошибок в уже созданных проектах</li>
+                    <li>Разработка нестандартных элементов пользовательского интерфейса с применением векторной алгебры</li>
+                    <li>Создание sftp клиента для развертывания по локальной сети проектов на тестируемых устройствах с операционной системой linux xubuntu</li>
+                    <li>Некоторое время занимал должность <span className='font-bold border-b'>TeamLead</span></li>
                 </ul>
             </div>
         </article>

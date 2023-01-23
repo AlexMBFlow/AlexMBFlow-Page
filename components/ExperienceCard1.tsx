@@ -41,22 +41,21 @@ export default function ExperienceCard({ companyName, jobName, technology, date,
                 <h4 className='text-4xl font-light'>{jobName}</h4>
                 <p className='font-bold text-2xl mt-1'>{companyName}</p>
                 <div className='flex space-x-2 my-2'>
-                {
-                    technology.map(tech => (
-                        <img key={counter++} style={{
-                            width: "6.5em",
-                            height: "2.5em"
-                        }} className='h-10 w-10 rounded-full p-2' src={tech} alt="" />
-                    ))
-                }
+                    {
+                        technology.map(tech => (
+                            <img key={counter++} style={{
+                                width: "5.5em",
+                                height: "1.5em"
+                            }} className='h-10 w-10 rounded-full mr-2' src={tech} alt="" />
+                        ))
+                    }
                 </div>
                 <p className='uppercase py-5 text-gray-300'>{date[0]} - {date[1]}</p>
                 <ul className="list-disc space-y-4 ml-5 text-lg">
-                    <li>Summary points</li>
-                    <li>Summary points</li>
-                    <li>Summary points</li>
-                    <li>Summary points</li>
-                    <li>Summary points</li>
+                    <li>Дорабатывал и оптимизировал виртуальные торговые площадки, предоставляющие возможность покупать товары различных производителей или частных магазинов на базе WordPress Dokan.
+                    </li>
+                    <li>Также занимался доработкой сайтов на WordPress.
+                        У человека был аккаунт с хорошими отзывами на фриланс бирже kwork, и некоторые заказы он делегировал мне</li>
                 </ul>
             </div>
         </article>

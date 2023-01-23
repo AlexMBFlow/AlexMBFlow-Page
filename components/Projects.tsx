@@ -1,11 +1,49 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import Mushustin from "../content/mishustin.jpg"
+import Leroy from "../content/leroy.jpg"
+import Triumf from "../content/triumf.jpg"
+import Skolkovo from "../content/skolkovo.jpg"
+import LigaStavok from "../content/ligastavok.jpg"
+import Mari from "../content/mari.jpg"
 
 type Props = {}
 
 export default function Projects({ }: Props) {
     let counter = 1
-    const projects = [1, 2, 3, 4, 5]  
+    interface IProjects {
+        image: any
+        name: string
+        desc: string[]
+    }
+    const projects: IProjects[] = [{
+        image: Leroy,
+        name: "Леруа Мерлен",
+        desc: ["Создал раздел с обратной связью, который отправляется на электронную почту", "Настраивал позицию карт для всех оринтаций (карты написаны на Three.js)", "Внедрение модуля для стрима изображения с задней камеры в фон приложения",
+            "Реализовал слайдер на круглом втором дисплее, взаимодействующий с основным окном", "Внедрил модуль распознавания лиц", "Добавил функционал рассказа сценария гида для определенного человека при распознавании лица"]
+    }, {
+        image: Mushustin,
+        name: 'Аэропорт "Шереметьево"',
+        desc: ["Внедрил возможность выбора места посадки в самолете на втором круглом дисплее", "Встроил записанные видео с гидами в приложение", "Также приложение оценил Михаил Мишустин на мероприятии \"Транспортная неделя\""],
+    }, {
+        image: Triumf,
+        name: "Триумф Палас",
+        desc: ["Реализовал личный кабинет жителя жилого комплекса", "Внедрил и адаптировал под проект модуль показа рекламы"]
+    }, {
+        image: Skolkovo,
+        name: "Бизнес школа \"Сколково\"",
+        desc: ["Добавил возможность получения актуального расписания событий на устройство со стороннего апи, сохранения расписания на сервер с контентом по ftp",
+            "Переписал логику скачивания видео с гидами с админки на созданный для данной задачи модуль"]
+    }, {
+        image: LigaStavok,
+        name: "Лига Ставок",
+        desc: ["Создание страницы с текущими матчами"]
+    },
+    {
+        image: Mari,
+        name: "Mari",
+        desc: ["Создание страницы с текущими матчами"]
+    }]
 
     return (
         <motion.div
@@ -24,7 +62,7 @@ export default function Projects({ }: Props) {
             </h3>
 
             <div
-             className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20
+                className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20
             scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin select-none'>
                 {projects.map((project, i) => (
                     <div key={counter++} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5
@@ -44,16 +82,19 @@ export default function Projects({ }: Props) {
                             viewport={{
                                 once: true
                             }}
-                            src="https://sun1-94.userapi.com/impf/5_fNmUtVfHXa7t9baViL53n7xCC75Ui7pWokpw/bJzS8DbGC90.jpg?size=135x92&quality=95&crop=2,0,1346,916&sign=2b221700c99c9723e0f1f0334bfa5815" alt="" />
+                            src={project.image.src}
+                            alt=""
+                            className='max-w-xs'
+                        />
 
                         <div className='space-y-10 px-0 md:p-10 max-w-6xl'>
-                            <h4 className='text-4xl font-semibold text-center'>
-                                <span className='underline decoration-[#F7AB0A]/50'>Леруа Мерлен, проект</span>
-                                <div>{i + 1} из {projects.length}</div>                                
+                            <h4 className='text-3xl font-semibold text-center'>
+                                <span className='underline decoration-[#F7AB0A]/50'>{project.name},</span>
+                                <div>проект {i + 1} из {projects.length}</div>
                             </h4>
-                            <p className='text-lg text-center md:text-left'>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit assumenda illo facere ipsam officia enim temporibus, ipsa ut laudantium voluptates, animi reprehenderit, voluptate eveniet aut quo perspiciatis commodi quisquam nam?
-                            </p>
+                            <ul className='list-disc text-lg text-center md:text-left'>
+                                {project.desc.map(desc => <li key={counter++}>{desc}</li>)}
+                            </ul>
                         </div>
                     </div>
                 ))}
