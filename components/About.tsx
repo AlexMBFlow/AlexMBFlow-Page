@@ -16,7 +16,6 @@ export default function About({ }: Props) {
             transition={{
                 duration: 1.5
             }}>
-            <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Обо мне</h3>
             <motion.img
                 initial={{
                     x: -200,

@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div style={{
       scrollBehavior: "smooth"
-    }} className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0
+    }} className='bg-[rgb(36,36,36)] text-white h-screen overflow-y-scroll overflow-x-hidden z-0
     scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
       <Head>
         <title>Hitotsu page</title>
@@ -23,27 +23,27 @@ export default function Home() {
 
       <Header />
 
-      <section id="hero" className='snap-start'>
+      <section id="hero" className=''>
         <Hero />
       </section>
 
-      <section id='about' className='snap-center'>
+      <section id='about' className=''>
         <About />
       </section>
 
-      <section id="experience" className='snap-center'>
+      <section id="experience" className=''>
         <WorkExperience />
       </section>
 
-      <section id="skills" className='snap-start'>
+      <section id="skills" className=''>
         <Skills />
       </section>
 
-      <section id="projects" className='snap-start'>
+      <section id="projects" className=''>
         <Projects />
       </section>
 
-      <section id="contact" className='snap-start'>
+      <section id="contact" className=''>
         <ContactMe />
       </section>
     </div>

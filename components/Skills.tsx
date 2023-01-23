@@ -36,7 +36,7 @@ export default function Skills({ }: Props) {
                 Навыки
             </h3>
 
-            <div className='grid grid-cols-4 gap-5 px-3'>
+            <div className='grid grid-cols-4 gap-5 px-5'>
                 <Skill persent={95} image={js} directionLeft={true} />
                 <Skill persent={70} image={ts} directionLeft={true} />
                 <Skill persent={90} image={react} directionLeft={true} />
