@@ -11,7 +11,7 @@ type Props = {
 
 export default function Skill({ directionLeft, image, persent }: Props) {
     return (
-        <div className='group rounded-full relative flex cursor-pointer'>
+        <div className='group rounded-full relative flex'>
             <motion.div
                 initial={{
                     x: directionLeft ? -50 : 50,
@@ -24,12 +24,12 @@ export default function Skill({ directionLeft, image, persent }: Props) {
                 transition={{
                     duration: 0.6
                 }}
-                className='rounded-full  object-cover w-24 
+                className='rounded-full object-cover w-24 
                 h-24 md:w-28 md:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out'
             >
                 <Image
                     alt=''
-                    className='rounded-full object-contain'
+                    className='rounded-full '
                     src={image}
                     fill
                     sizes="(max-width: 768px) 100vw,
@@ -39,7 +39,7 @@ export default function Skill({ directionLeft, image, persent }: Props) {
             </motion.div>
             <motion.div
                 initial={{
-                    x: directionLeft ? -200 : 200,
+                    x: directionLeft ? -50 : 50,
                 }}
                 whileInView={{
                     x: 0
@@ -47,10 +47,10 @@ export default function Skill({ directionLeft, image, persent }: Props) {
                 transition={{
                     duration: 0.65
                 }}
-                className='absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out 
-            group-hover:bg-white h-24 w-24 md:w-28 md:h-28 xl:w-32 xl:h-32 rounded-full z-0'>
+                className='absolute opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out 
+            group-hover:bg-white h-20 w-20 md:w-28 md:h-28 xl:w-32 xl:h-32 rounded-full z-0'>
                 <div className='flex items-center justify-center h-full'>
-                    <p className='text-3xl font-bold text-black opacity-100'>{persent}%</p>
+                    <p className='text-3xl font-bold text-black opacity-100 cursor-default'>{persent}%</p>
                 </div>
 
             </motion.div>

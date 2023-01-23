@@ -8,7 +8,6 @@ import react from "../content/react.png"
 import redux from "../content/redux.png"
 import mobx from "../content/mobx.png"
 import nodejs from "../content/nodejs.png"
-import git from "../content/git.png"
 import mongodb from "../content/mongodb.png"
 import electron from "../content/electron.png"
 import antd from "../content/antd.png"
@@ -37,22 +36,21 @@ export default function Skills({ }: Props) {
                 Навыки
             </h3>
 
-            <div className='grid grid-cols-4 gap-5'>
+            <div className='grid grid-cols-4 gap-5 px-3'>
                 <Skill persent={95} image={js} directionLeft={true} />
                 <Skill persent={70} image={ts} directionLeft={true} />
                 <Skill persent={90} image={react} directionLeft={true} />
                 <Skill persent={90} image={redux} directionLeft={true} />
-                <Skill persent={70} image={mobx} directionLeft={true} />
-                <Skill persent={75} image={nodejs} directionLeft={true} />
-                <Skill persent={90} image={git} directionLeft={true} />
+                <Skill persent={75} image={mobx} directionLeft={true} />
+                <Skill persent={85} image={nodejs} directionLeft={true} />
                 <Skill persent={60} image={mongodb} />
                 <Skill persent={85} image={electron} />
                 <Skill persent={90} image={antd} />
                 <Skill persent={90} image={jira} />
                 <Skill persent={55} image={webpack} />
-                <Skill persent={60} image={gulp} />
+                <Skill persent={76} image={gulp} />
                 <Skill persent={99} image={figma} />
-                <Skill persent={5} image={rust} />
+                <Skill persent={10} image={rust} />
             </div>
         </motion.div>
     )
