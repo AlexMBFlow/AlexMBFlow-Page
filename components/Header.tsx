@@ -45,12 +45,8 @@ export default function Header({ }: Props) {
                     duration: 1.5
                 }}>
 
-                {/* <a href="#contact">
-                    <SocialIcon className='cursor-pointer' network='email' fgColor='gray' bgColor='transparent' />
-                </a>
- */}
                 <Link href="#contact">
-                    <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Связаться</p>
+                    <p className='uppercase md:inline-flex text-sm text-gray-400'>Связаться</p>
                 </Link>
             </motion.div>
         </header>
